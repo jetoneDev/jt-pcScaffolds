@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Router, hashHistory } from 'jt-app';
+import { Router, hashHistory } from 'link-router';
 import Dva from 'dva';
 import { Routes } from './config';
 import * as Models from './models';
