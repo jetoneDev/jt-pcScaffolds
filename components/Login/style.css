@@ -1,0 +1,21 @@
+.form {
+padding: 30px;
+  }
+.forgot {
+    float: right;
+  }
+ .button {
+    width: 100%;
+  }
+.formContainer{
+    height: 350px;
+    width: 350px;
+    background-image: url("http://www.gghypt.net/images/new_login/login_bg.png");
+}
+.input{
+       height: 32px;
+}
+.register{
+text-align: center;
+padding:10px
+}

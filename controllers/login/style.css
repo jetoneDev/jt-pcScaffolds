@@ -1,0 +1,64 @@
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: #f2f2f2
+
+}
+.loginForm{
+
+    margin-top: 40px;
+    margin-left:40px;
+}
+.content{
+    height:60%;
+    min-height: 424px;
+     background-image: url("http://www.gghypt.net/images/new_login/login_bg2.png?v=1504282993628")
+}
+.head{
+    height:15%;
+    background-color: #f2f2f2;
+    width:100%;
+    padding:0px;
+}
+.foot{
+    height:15%;
+    text-align:center;
+    padding-top:10px;
+    
+}
+.title{ 
+
+    padding-left: 30px;
+}
+.logoImage{
+    width: 40px;
+    margin-right: 8px;
+    padding-top: 10px;
+}
+.logoSpan{
+    float: right;
+    font-size: 16px;
+    font-family: Raleway,Hiragino Sans GB,sans-serif;
+    text-transform: uppercase;
+}
+
+.logo {
+    float: left;
+    margin-left:50px;
+}
+.footImg{
+    padding-bottom:20px;
+}
+.navBar{
+background: white;
+line-height: 64px;
+width:100%;
+}
+.logoBar{
+    border-bottom: 1px solid #e9e9e9;
+    width:100%;
+    height:66px;
+}
+.span{
+    display: inline;
+}

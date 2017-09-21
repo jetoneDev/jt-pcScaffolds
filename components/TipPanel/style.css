@@ -1,0 +1,37 @@
+.report-tip-content{
+    
+    
+    }
+   .title{
+       font-size: 14px;
+       line-height: 21px;
+   } 
+
+   .tipBar{
+       padding-top: 21px;
+       padding-bottom: 21px;
+   }
+.report-tip{
+    border: 1px solid #d4e5d9;
+    border-radius: 2px;
+    background-color: #eff7f1;
+    margin-top: 10px;
+    position: relative;
+    padding: 10px 40px 10px 15px;
+    color: #5b5d61;
+    line-height: 2;
+}
+.tip-arrow{
+    position: absolute;
+    top: -7px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 6px solid #d4e5d9;
+    left: 65px;
+
+}
+.tipIcon{
+padding-left:10px;  
+}

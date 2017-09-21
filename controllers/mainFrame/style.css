@@ -1,0 +1,102 @@
+/* head */
+
+.head {
+    background-Color: #3385e3;
+    height: auto;
+    line-height: 64px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.title {
+    color: #fff;
+    font-size: 18px;
+}
+
+
+/* navBar */
+
+.navBar {
+    line-height: 64px;
+    background-color: #3385e3;
+    border-bottom: 0px;
+}
+
+.navBarItem {
+    color: #d0eae9;
+}
+
+.navBarItem:hover {
+    color: #fff !important;
+}
+
+.navBarItemSelected {
+    border-bottom: 4px solid #fff !important;
+    color: #fff !important;
+}
+
+
+/* actionbar */
+
+.actionBar {
+    float: right;
+}
+
+.userLogo {
+    font-size: 16px;
+    color: #d0eae9;
+}
+
+.userLogo:hover {
+    color: white
+}
+
+.userName {
+    font-size: 16px;
+    padding-left: 10px;
+    color: #d0eae9
+}
+
+.userName:hover {
+    color: white
+}
+
+
+/* sideBar */
+
+.sideBar {
+    background-color: #fbfbfb;
+}
+
+.hideItem {
+    background-color: #ecf6fd;
+}
+
+.sideBarItem {
+    background-color: #fbfbfb;
+}
+
+
+/* tipBar */
+
+.tipBar {
+    background-color: #fff;
+    height: auto;
+}
+
+
+/* content */
+
+.content {
+    margin: 24px;
+    background-color: #fff;
+    padding: 24px;
+    min-height: 280px;
+}
+
+
+/* footer */
+
+.footer {
+    text-align: center;
+}
