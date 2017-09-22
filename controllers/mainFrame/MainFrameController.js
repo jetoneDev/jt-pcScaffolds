@@ -29,35 +29,48 @@ const MainFrameController = ({ dispatch, mainFrame: state, children }) => {
     //创建侧栏
     function createSideBar() {
         const sideBar =
-            <Menu theme="light"  mode="inline" onSelect={sideBarMenuSelect}>
-                <Menu.Item key='nav' className={styles.hideItem} >
+            <div>
+                <Menu theme="light" mode="inline" onSelect={sideBarMenuSelect}>
+                    <Menu.Item key='nav' className={`${styles.hideItem} ${styles.allNavIcon}`}>
+                        <Icon
+                            className="trigger"
+                            type={state.collapsed ? 'menu-unfold' : 'menu-fold'}
+                            onClick={toggle}
+                        />
+                        <span>网站导航</span>
+                    </Menu.Item>
+                </Menu>
+                <Menu theme="light" mode="inline" onSelect={sideBarMenuSelect}>
+                    {/*<Menu.Item key='nav' className={styles.hideItem} >
                     <Icon
                         className="trigger"
                         type={state.collapsed ? 'menu-unfold' : 'menu-fold'}
                         onClick={toggle}
                     />
                     <span>网站导航</span>
-                </Menu.Item>
-                {state.sideBar.map((x, i) => {
-                    let type;
-                    switch (x.Name) {
-                        case '流程管理':
-                            type = 'fork';
-                            break;
-                        case '组织架构管理':
-                            type = 'user';
-                        default:
-                            break;
-                    }
-                    return <SubMenu className={styles.sideBarItem} key={`sub${i}`} title={<span><Icon type={type} /> {state.collapsed ? '' : x.Name}</span>}>
-                        {x.Value.map((y, j) => <Menu.Item style={{ backgroundColor: '#fbfbfb' }} key={y.Name}>{y.Name}</Menu.Item>)}
-                    </SubMenu>
-                })}</Menu>
+                </Menu.Item>*/}
+                    {state.sideBar.map((x, i) => {
+                        let type;
+                        switch (x.Name) {
+                            case '流程管理':
+                                type = 'fork';
+                                break;
+                            case '组织架构管理':
+                                type = 'user';
+                                break;
+                            default:
+                                break;
+                        }
+                        return <SubMenu className={styles.sideBarItem} key={`sub${i}`} title={<span><Icon type={type} /> {state.collapsed ? '' : x.Name}</span>}>
+                            {x.Value.map((y, j) => <Menu.Item style={{ backgroundColor: '#fbfbfb' }} key={y.Name}>{y.Name}</Menu.Item>)}
+                        </SubMenu>
+                    })}</Menu>
+            </div>
         return sideBar;
     }
     //创建用户功能栏
     function createUserActionBar() {
-        const userAction = <Menu mode='vertical' onClick={actionBarClick}>
+        const userAction = <Menu className={styles.cc} mode='vertical' onClick={actionBarClick}>
             <Menu.Item>个人资料</Menu.Item>
             <Menu.Item>退出</Menu.Item>
         </Menu>
@@ -85,7 +98,7 @@ const MainFrameController = ({ dispatch, mainFrame: state, children }) => {
 
     return (
         <div>
-            <Layout>
+            <Layout className={styles.container_div}>
                 <Row className={styles.head}>
                     <Col span={4}><span className={styles.title}>{state.logoTitle}</span></Col>
                     <Col span={14}>
@@ -94,19 +107,20 @@ const MainFrameController = ({ dispatch, mainFrame: state, children }) => {
                     <Col span={6}>
                         <div className={styles.actionBar}>
                             <Icon type="user" className={styles.userLogo} />
-                            <Popover placement="bottom" content={createUserActionBar()} trigger="hover">
+                            <Popover placement="bottom" className={styles.cc} content={createUserActionBar()} trigger="hover">
                                 <span className={styles.userName}>Hi:xxx</span>
                             </Popover>
                         </div>
                     </Col>
                 </Row>
-                <Layout style={{ minHeight: '100vh' }}>
+                <Layout className={styles.contentContainer}>
                     <Sider
                         collapsible
                         collapsed={state.collapsed}
                         trigger={null}
                         className={styles.sideBar}
                     >
+
                         {createSideBar()}
                     </Sider>
                     <Layout >

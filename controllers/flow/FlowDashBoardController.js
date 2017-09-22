@@ -39,7 +39,7 @@ const FlowCardList = props => {
 
 const FlowDashBoardController = ({ dispatch, flowDashboard: state }) => {
     return (
-        <FlowCardList data={state.dataSource} />
+         <FlowCardList data={state.dataSource} />
     );
 };
 

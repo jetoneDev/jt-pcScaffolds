@@ -25,7 +25,7 @@ export default {
                         Name: "人员管理", Value: "main/Og"
                     }
                 ]
-            },
+            }
         ],
         //侧栏选中
         sideBarSelected: '',

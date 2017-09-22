@@ -24,15 +24,18 @@
 
 .navBarItem {
     color: #d0eae9;
-}
+    border-bottom: none!important;
+    }
 
 .navBarItem:hover {
     color: #fff !important;
+    border-bottom: none!important;
 }
 
 .navBarItemSelected {
     border-bottom: 4px solid #fff !important;
     color: #fff !important;
+    box-sizing: border-box;
 }
 
 
@@ -86,12 +89,25 @@
 
 
 /* content */
+.container_div{
+    position: relative;
+    height: 100%;
+    overflow: auto;
+}
+.contentContainer{
+    /*除了上导航栏的以下内容容器*/
+    padding-top: 8px;
+    box-sizing: border-box;
+    overflow: auto;
 
+}
 .content {
     margin: 24px;
     background-color: #fff;
     padding: 24px;
     min-height: 280px;
+    overflow: auto;
+    
 }
 
 
@@ -99,4 +115,12 @@
 
 .footer {
     text-align: center;
+    padding: 0 0 4px;
+    box-sizing: border-box;
 }
+    .allNavIcon::after{
+        border-right: none!important
+    }
+    .cc{
+        border-right: none;
+    }
